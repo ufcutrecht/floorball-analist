@@ -6,12 +6,12 @@
 <meta name="theme-color" content="#14202e">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Floorbal">
+<meta name="apple-mobile-web-app-title" content="Floorball">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" type="image/png" href="icon-192.png">
-<title>Floorbal Analist</title>
+<title>Floorball Analist</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
 <style>
 :root{
@@ -181,7 +181,7 @@ select{font:inherit;padding:6px 10px;border-radius:999px;border:1px solid var(--
   </section>
 
   <div class="install" id="installHint" hidden>
-    <div><b>Zet Floorbal op je beginscherm.</b> Tik onderin Safari op het deelicoon en kies "Zet op beginscherm". Dan opent hij als app, schermvullend.</div>
+    <div><b>Zet Floorball op je beginscherm.</b> Tik onderin Safari op het deelicoon en kies "Zet op beginscherm". Dan opent hij als app, schermvullend.</div>
     <button class="btn small" id="installClose">Oké</button>
   </div>
   <div class="savepanel" id="savePanel" hidden>
@@ -428,7 +428,7 @@ if('serviceWorker' in navigator && location.protocol==='https:') navigator.servi
 
 /* ---------- veld ---------- */
 function rink(cells=''){
-  return `<svg class="rink" viewBox="0 0 400 210" role="img" aria-label="Floorbalveld, wij spelen naar rechts">
+  return `<svg class="rink" viewBox="0 0 400 210" role="img" aria-label="Floorballveld, wij spelen naar rechts">
     <rect class="floor" x="4" y="14" width="392" height="180" rx="30"/>
     <line class="ln" x1="200" y1="14" x2="200" y2="194"/><circle class="ln" cx="200" cy="104" r="16"/>
     <rect class="ln" x="22" y="84" width="22" height="40" rx="3"/><rect class="ln" x="356" y="84" width="22" height="40" rx="3"/>
@@ -656,7 +656,7 @@ $('plChips').addEventListener('click',e=>{const b=e.target.closest('[data-t]'); 
 $('heatChips').addEventListener('click',e=>{const b=e.target.closest('[data-h]'); if(b){heatF=b.dataset.h; renderReport();}});
 function reportText(){
   const list=evts(), lbl=perF==='all'?'hele wedstrijd':'periode '+perF;
-  const lines=[`Floorbal: wij – ${M.opp} (${lbl})`,`Stand: ${$('sUs').textContent}–${$('sThem').textContent}`,'Wij spelen met hoge druk. "Door de druk" = dat team speelde zich uit de druk.',''];
+  const lines=[`Floorball: wij – ${M.opp} (${lbl})`,`Stand: ${$('sUs').textContent}–${$('sThem').textContent}`,'Wij spelen met hoge druk. "Door de druk" = dat team speelde zich uit de druk.',''];
   EV.forEach(e=>lines.push(`${e.l}: wij ${count(list,'us',e.k)} – zij ${count(list,'them',e.k)}`));
   lines.push('','Wat valt op:'); insights(list).forEach(([,t])=>lines.push('- '+t));
   [['us','Wij'],['them',M.opp]].forEach(([team,l])=>{ const st=playerStats(list,team); if(!st.length) return;

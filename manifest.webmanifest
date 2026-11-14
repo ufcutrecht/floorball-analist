@@ -1,7 +1,7 @@
 {
-  "name": "Floorbal Analist",
-  "short_name": "Floorbal",
-  "description": "Film floorbalwedstrijden, markeer acties en maak een rapport voor de coach.",
+  "name": "Floorball Analist",
+  "short_name": "Floorball",
+  "description": "Film floorballwedstrijden, markeer acties en maak een rapport voor de coach.",
   "lang": "nl",
   "start_url": "./",
   "scope": "./",
